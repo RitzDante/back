@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = $"Заявки #{Model.Id}";
+}
+
+ <h2>Заявки #@Model.Id</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Тип нарушения</dt>
+        <dd class="col-sm-10">@Model.ViolationTypeName</dd>
+
+        <dt class="col-sm-2">Описание</dt>
+        <dd class="col-sm-10">@Model.Description</dd>
+
+        <dt class="col-sm-2">Адрес</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+
+        <dt class="col-sm-2">Координаты</dt>
+        <dd class="col-sm-10">(@Model.Latitude, @Model.Longitude)</dd>
+        
+        <dt class="col-sm-2">Статус</dt>
+        <dd class="col-sm-10">@Model.StatusName</dd>
+
+        <dt class="col-sm-2">Дата создания</dt>
+        <dd class="col-sm-10">@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Изменить статус</h4>
+    <form asp-action="ChangeStatus" method="post">
+        <input type="hidden" name="id" value="@Model.Id"/>
+        <select name="newStatusId" class="form-control" style="width: auto; display: inline-block;">
+            <option value="2">В обработке</option>
+            <option value="3">В работе</option>
+            <option value="4">Завершенно</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["ErrorMessage"]</div>
+}
+<a asp-action="Index">Вернуться к назад</a>

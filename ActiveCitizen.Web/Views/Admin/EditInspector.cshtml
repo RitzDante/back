@@ -1,0 +1,77 @@
+﻿@model ActiveCitizen.Web.Models.InspectorEditViewModel
+@{
+	ViewData["Title"] = "Редактирование инспектора";
+}
+
+<h2>Редактирование инспектора</h2>
+
+<div class="row">
+	<div class="col-md-6">
+		<form asp-action="EditInspector" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Id" />
+
+			<div class="form-group mb-3">
+				<label asp-for="FullName" class="form-label"></label>
+				<input asp-for="FullName" class="form-control" disabled />
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="Email" class="form-label"></label>
+				<input asp-for="Email" class="form-control" disabled />
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="PhoneNumber" class="form-label"></label>
+				<input asp-for="PhoneNumber" class="form-control" disabled />
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="DistrictId" class="form-label">Район</label>
+				<select asp-for="DistrictId" class="form-control" asp-items="@(new SelectList(ViewBag.Districts, "Id", "Name"))">
+					<option value="">Не выбран</option>
+				</select>
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="NewPassword" class="form-label">Новый пароль</label>
+				<input asp-for="NewPassword" class="form-control" type="password"/>
+				<span asp-validation-for="NewPassword" class="text-danger"></span>
+			</div>
+
+			<div class="form-group mb-3">
+				<label asp-for="ConfirmPassword" class="form-label">Подтверждение пароля</label>
+				<input asp-for="ConfirmPassword" class="form-control" type="password"/>
+				<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+			</div>
+
+			<div class="form-group mb-3">
+				<button type="submit" class="btn btn-primary">Сохранить изменения</button>
+				<a asp-action="Index" class="btn btn-secondary">Отмена</a>
+				<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Удалить инспектора</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="deleteModalLabel"> Подтверждение удаления</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-footer">
+				<form asp-action="DeleteInspector" asp-route-id="@Model.Id" method="post">
+					@Html.AntiForgeryToken()
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+					<button type="submit" class="btn btn-danger">Удалить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial" />
+}

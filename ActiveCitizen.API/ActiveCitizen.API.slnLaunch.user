@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "ActiveCitizen.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveCitizen.API", "ActiveCitizen.API.csproj", "{977400C3-3AD0-4F8D-85AF-F75B74590D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveCitizen.Web", "..\ActiveCitizen.Web\ActiveCitizen.Web.csproj", "{288F8994-973F-4D8C-891E-B813BF0FF0EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{977400C3-3AD0-4F8D-85AF-F75B74590D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977400C3-3AD0-4F8D-85AF-F75B74590D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977400C3-3AD0-4F8D-85AF-F75B74590D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977400C3-3AD0-4F8D-85AF-F75B74590D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288F8994-973F-4D8C-891E-B813BF0FF0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288F8994-973F-4D8C-891E-B813BF0FF0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288F8994-973F-4D8C-891E-B813BF0FF0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288F8994-973F-4D8C-891E-B813BF0FF0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {531597BA-2B51-46D3-8CE8-C06D53513A57}
+	EndGlobalSection
+EndGlobal
