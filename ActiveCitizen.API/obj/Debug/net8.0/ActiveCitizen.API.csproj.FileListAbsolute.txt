@@ -282,3 +282,5 @@ D:\back\ActiveCitizen.API\obj\Debug\net8.0\refint\ActiveCitizen.API.dll
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.pdb
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.genruntimeconfig.cache
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ref\ActiveCitizen.API.dll
+D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.sourcelink.json
+D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.staticwebassets.runtime.json
