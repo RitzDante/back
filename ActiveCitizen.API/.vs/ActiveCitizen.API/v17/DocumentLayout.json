@@ -3,39 +3,16 @@
   "WorkspaceRootPath": "D:\\back\\ActiveCitizen.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\inspector\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\wwwroot\\js\\inspector-map.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\inspector\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\controllers\\inspectorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\services\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\models\\statusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\models\\claimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\claimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\claimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,136 +31,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T13:59:30.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "inspector-map.js",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAswNMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-14T13:28:02.795Z",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:41:09.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T11:07:13.169Z",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.API\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T17:40:01.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T11:06:44.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InspectorController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:06:24.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClaimsController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
-              "RelativeToolTip": "Controllers\\ClaimsController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAmwHoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:49:12.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApiClient.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Services\\ApiClient.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Services\\ApiClient.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Services\\ApiClient.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Services\\ApiClient.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAqwIwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:05:44.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IApiClient.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Services\\IApiClient.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Services\\IApiClient.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Services\\IApiClient.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Services\\IApiClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:05:04.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StatusViewModel.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:04:43.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClaimViewModel.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:03:45.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClaimDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\ClaimDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
-              "RelativeToolTip": "DTOs\\ClaimDto.cs",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.API\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Services\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T15:27:27.508Z"
+              "WhenOpened": "2026-05-14T17:39:01.95Z",
+              "EditorCaption": ""
             }
           ]
         }

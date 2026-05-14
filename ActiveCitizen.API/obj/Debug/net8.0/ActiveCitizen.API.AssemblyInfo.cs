@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ActiveCitizen.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d9fd13e0058294dda41fd42a6fca709db48d9ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fcb1e5add471cbd446fa2df130acde2fcbc8a21")]
 [assembly: System.Reflection.AssemblyProductAttribute("ActiveCitizen.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ActiveCitizen.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
