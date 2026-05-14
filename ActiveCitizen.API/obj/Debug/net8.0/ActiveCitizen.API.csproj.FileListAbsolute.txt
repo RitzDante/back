@@ -142,6 +142,7 @@ D:\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.genruntimeconfig.cache
 D:\ActiveCitizen.API\obj\Debug\net8.0\ref\ActiveCitizen.API.dll
 D:\back\ActiveCitizen.API\bin\Debug\net8.0\appsettings.Development.json
 D:\back\ActiveCitizen.API\bin\Debug\net8.0\appsettings.json
+D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.staticwebassets.runtime.json
 D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.staticwebassets.endpoints.json
 D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.exe
 D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.deps.json
@@ -267,6 +268,7 @@ D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.AssemblyInfoInputs.
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.AssemblyInfo.cs
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.csproj.CoreCompileInputs.cache
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.MvcApplicationPartsAssemblyInfo.cache
+D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.sourcelink.json
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -282,5 +284,3 @@ D:\back\ActiveCitizen.API\obj\Debug\net8.0\refint\ActiveCitizen.API.dll
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.pdb
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.genruntimeconfig.cache
 D:\back\ActiveCitizen.API\obj\Debug\net8.0\ref\ActiveCitizen.API.dll
-D:\back\ActiveCitizen.API\obj\Debug\net8.0\ActiveCitizen.API.sourcelink.json
-D:\back\ActiveCitizen.API\bin\Debug\net8.0\ActiveCitizen.API.staticwebassets.runtime.json

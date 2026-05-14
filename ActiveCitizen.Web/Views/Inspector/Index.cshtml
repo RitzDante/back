@@ -1,117 +1,370 @@
-﻿@using System.Linq
-@model List<ActiveCitizen.Web.Models.ClaimViewModel>
+﻿@using System.Text.Json
+@using ActiveCitizen.Web.Models
+@model List<ClaimViewModel>
 
 @{
     ViewData["Title"] = "Панель инспектора";
+
+    var claimsForMap = Model.Select(c => new
+    {
+        id = c.Id,
+        violationTypeName = c.ViolationTypeName,
+        violationTypeId = c.ViolationTypeId,
+        address = c.Address,
+        statusName = c.StatusName,
+        statusId = c.StatusId,
+        createdAt = c.CreatedAt.ToString("dd.MM.yyyy"),
+        latitude = c.Latitude,
+        longitude = c.Longitude
+    }).ToList();
+
+    var claimsJson = JsonSerializer.Serialize(
+        claimsForMap,
+        new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        }
+    );
 }
 
-<h2>Заявки вашего района</h2>
+<div class="container-fluid mt-4">
+    <h1 class="mb-4">Заявки вашего района</h1>
 
-<div class="row mb-3">
-    <div class="col-md-12">
-        <label for="statusFilter">Фильтр по статусу</label>
-        <select id="statusFilter" class="form-control d-inline-block w-auto me-3">
-            <option value="">Все статусы</option>
-            <option value="новая">Новая</option>
-            <option value="в работе">В работе</option>
-            <option value="завершена">Завершена</option>
-            <option value="отклонена">Отклонена</option>
-        </select>
+    <div class="row mb-4">
+        <div class="col-md-4 mb-2">
+            <label for="statusFilter" class="form-label">Фильтр по статусу</label>
+            <select id="statusFilter" class="form-select">
+                <option value="">Все статусы</option>
+                <option value="Новая">Новая</option>
+                <option value="В работе">В работе</option>
+                <option value="Завершена">Завершена</option>
+                <option value="Отклонено">Отклонено</option>
+            </select>
+        </div>
 
-        <label for="violationTypeFilter">Фильтр по типу нарушения:</label>
-        <select id="violationTypeFilter" class="form-control d-inline-block w-auto me-3">
-            <option value="">Все типы</option>
-            <option value="тс размещено на зеленых насаждениях">ТС размещено на зеленых насаждениях</option>
-            <option value="тс перегораживает подход к зданию или вход в него">ТС перегораживает подход к зданию или вход в него</option>
-            <option value="тс размещено на спортивной/детской площадке или площадке для выгула животных">ТС размещено на спортивной/детской площадке или площадке для выгула животных</option>
-            <option value="тс перегораживает контейнерную площадку">ТС перегораживает контейнерную площадку</option>
-            <option value="тс размещено на эксплуатационной маркировке">ТС размещено на эксплуатационной маркировке</option>
-        </select>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
-        <h4>Список заявок</h4>
-
-        @if (Model.Any())
-        {
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Тип нарушения</th>
-                        <th>Адрес</th>
-                        <th>Статус</th>
-                        <th>Дата</th>
-                        <th></th>
-                    </tr>
-                </thead>
-
-                <tbody id="claimsTableBody">
-                    @foreach (var claim in Model)
-                    {
-                        var statusValue = (claim.StatusName ?? "").ToLower().Trim();
-                        var violationTypeValue = (claim.ViolationTypeName ?? "").ToLower().Trim();
-
-                        <tr class="claim-row"
-                            data-status="@statusValue"
-                            data-violation-type="@violationTypeValue">
-                            <td>@claim.Id</td>
-                            <td>@claim.ViolationTypeName</td>
-                            <td>@claim.Address</td>
-                            <td>
-                                <span class="badge @GetStatusBadgeClass(claim.StatusName)">
-                                    @claim.StatusName
-                                </span>
-                            </td>
-                            <td>@claim.CreatedAt.ToShortDateString()</td>
-                            <td>
-                                <a asp-action="Details" asp-route-id="@claim.Id">Подробнее</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-
-            <p id="noFilteredClaimsMessage" class="text-muted d-none">
-                По выбранным фильтрам заявок не найдено.
-            </p>
-        }
-        else
-        {
-            <p id="noClaimsMessage">Нет заявок в вашем районе</p>
-        }
+        <div class="col-md-8 mb-2">
+            <label for="typeFilter" class="form-label">Фильтр по типу нарушения:</label>
+            <select id="typeFilter" class="form-select">
+                <option value="">Все типы</option>
+                <option value="ТС размещено на зеленых насаждениях">ТС размещено на зеленых насаждениях</option>
+                <option value="ТС перегораживает подход к зданию или вход в него">ТС перегораживает подход к зданию или вход в него</option>
+                <option value="ТС размещено на спортивной/детской площадке или площадке для выгула собак">ТС размещено на спортивной/детской площадке или площадке для выгула собак</option>
+                <option value="ТС перегораживает контейнерную площадку">ТС перегораживает контейнерную площадку</option>
+                <option value="ТС размещено на эксплуатационной маркировке">ТС размещено на эксплуатационной маркировке</option>
+            </select>
+        </div>
     </div>
 
-    <div class="col-md-6">
-        <h4>Карта заявок</h4>
-        <div class="bg-white rounded shadow-sm" style="height: 500px; overflow: hidden;">
-            <div id="map" style="height: 100%; width:100%; border-radius: 0.375rem; background:#f8f9fa;"></div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <h3 class="mb-3">Список заявок</h3>
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle" id="claimsTable">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Тип нарушения</th>
+                                <th>Адрес</th>
+                                <th>Статус</th>
+                                <th>Дата</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var claim in Model)
+                            {
+                                <tr class="claim-row"
+                                    data-status="@claim.StatusName"
+                                    data-type="@claim.ViolationTypeName">
+                                    <td>@claim.Id</td>
+                                    <td>@claim.ViolationTypeName</td>
+                                    <td>@claim.Address</td>
+                                    <td>
+                                        <span class="badge @GetStatusBadgeClass(claim.StatusName)">
+                                            @claim.StatusName
+                                        </span>
+                                    </td>
+                                    <td>@claim.CreatedAt.ToString("dd.MM.yyyy")</td>
+                                    <td>
+                                        <a asp-controller="Inspector"
+                                           asp-action="Details"
+                                           asp-route-id="@claim.Id">
+                                            Подробнее
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="emptyFilterMessage" class="alert alert-info d-none">
+                    По выбранным фильтрам заявок не найдено.
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    Нет заявок в вашем районе
+                </div>
+            }
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <h3 class="mb-3">Карта заявок</h3>
+
+            <div id="map" style="width: 100%; height: 560px; border-radius: 8px; overflow: hidden;"></div>
+
+            <div id="mapEmptyMessage" class="alert alert-warning mt-3 d-none">
+                Для выбранных заявок нет корректных координат для отображения на карте.
+            </div>
         </div>
     </div>
 </div>
 
 @functions {
-    private string GetStatusBadgeClass(string? status)
+    private string GetStatusBadgeClass(string? statusName)
     {
-        var value = status?.Trim().ToLower() ?? string.Empty;
-
-        return value switch
+        return statusName switch
         {
-            "новая" => "bg-warning text-dark",
-            "в работе" => "bg-primary",
-            "завершена" => "bg-success",
-            "отклонена" => "bg-danger",
+            "Новая" => "bg-warning text-dark",
+            "На рассмотрении" => "bg-info text-dark",
+            "В работе" => "bg-primary",
+            "Принято" => "bg-primary",
+            "Завершена" => "bg-success",
+            "Завершено" => "bg-success",
+            "Отклонено" => "bg-danger",
             _ => "bg-secondary"
         };
     }
 }
 
 @section Scripts {
-    <script>
-        window.claimsData = @Html.Raw(Model == null ? "[]" : Json.Serialize(Model));
-    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
-    <script src="~/js/inspector-map.js" asp-append-version="true"></script>
+    <script>
+        const allClaims = @Html.Raw(claimsJson);
+
+        let map = null;
+        let objectManager = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const statusFilter = document.getElementById('statusFilter');
+            const typeFilter = document.getElementById('typeFilter');
+
+            statusFilter.addEventListener('change', applyFilters);
+            typeFilter.addEventListener('change', applyFilters);
+
+            ymaps.ready(function () {
+                initMap();
+                applyFilters();
+            });
+        });
+
+        function initMap() {
+            map = new ymaps.Map('map', {
+                center: [59.938784, 30.314997],
+                zoom: 10,
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 32,
+                clusterDisableClickZoom: false
+            });
+
+            objectManager.clusters.options.set({
+                preset: 'islands#blueClusterIcons'
+            });
+
+            map.geoObjects.add(objectManager);
+        }
+
+        function applyFilters() {
+            const selectedStatus = document.getElementById('statusFilter').value;
+            const selectedType = document.getElementById('typeFilter').value;
+
+            const filteredClaims = allClaims.filter(function (claim) {
+                const statusOk = selectedStatus === '' || claim.statusName === selectedStatus;
+                const typeOk = selectedType === '' || claim.violationTypeName === selectedType;
+
+                return statusOk && typeOk;
+            });
+
+            updateTable(filteredClaims);
+            updateMap(filteredClaims);
+        }
+
+        function updateTable(filteredClaims) {
+            const rows = document.querySelectorAll('.claim-row');
+            const emptyFilterMessage = document.getElementById('emptyFilterMessage');
+
+            let visibleCount = 0;
+
+            rows.forEach(function (row) {
+                const rowStatus = row.getAttribute('data-status');
+                const rowType = row.getAttribute('data-type');
+                const rowId = row.children[0].innerText.trim();
+
+                const isVisible = filteredClaims.some(function (claim) {
+                    return claim.statusName === rowStatus &&
+                           claim.violationTypeName === rowType &&
+                           rowId === claim.id.toString();
+                });
+
+                row.style.display = isVisible ? '' : 'none';
+
+                if (isVisible) {
+                    visibleCount++;
+                }
+            });
+
+            if (emptyFilterMessage) {
+                if (visibleCount === 0 && rows.length > 0) {
+                    emptyFilterMessage.classList.remove('d-none');
+                } else {
+                    emptyFilterMessage.classList.add('d-none');
+                }
+            }
+        }
+
+        function updateMap(filteredClaims) {
+            if (!map || !objectManager) {
+                return;
+            }
+
+            objectManager.removeAll();
+
+            const features = [];
+
+            filteredClaims.forEach(function (claim) {
+                const latitude = toNumber(claim.latitude);
+                const longitude = toNumber(claim.longitude);
+
+                if (!isValidCoordinate(latitude, longitude)) {
+                    return;
+                }
+
+                features.push({
+                    type: 'Feature',
+                    id: claim.id,
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [latitude, longitude]
+                    },
+                    properties: {
+                        balloonContentHeader: 'Заявка №' + claim.id,
+                        balloonContentBody:
+                            '<strong>Тип:</strong> ' + escapeHtml(claim.violationTypeName) + '<br>' +
+                            '<strong>Адрес:</strong> ' + escapeHtml(claim.address) + '<br>' +
+                            '<strong>Статус:</strong> ' + escapeHtml(claim.statusName) + '<br>' +
+                            '<strong>Дата:</strong> ' + escapeHtml(claim.createdAt) + '<br>' +
+                            '<a href="/Inspector/Details/' + claim.id + '">Подробнее</a>',
+                        hintContent: 'Заявка №' + claim.id + ': ' + claim.statusName
+                    },
+                    options: {
+                        preset: getMarkerPresetByStatus(claim.statusName)
+                    }
+                });
+            });
+
+            objectManager.add({
+                type: 'FeatureCollection',
+                features: features
+            });
+
+            const mapEmptyMessage = document.getElementById('mapEmptyMessage');
+
+            if (features.length === 0) {
+                if (mapEmptyMessage) {
+                    mapEmptyMessage.classList.remove('d-none');
+                }
+
+                map.setCenter([59.938784, 30.314997], 10);
+                return;
+            }
+
+            if (mapEmptyMessage) {
+                mapEmptyMessage.classList.add('d-none');
+            }
+
+            if (features.length === 1) {
+                map.setCenter(features[0].geometry.coordinates, 14);
+            } else {
+                map.setBounds(objectManager.getBounds(), {
+                    checkZoomRange: true,
+                    zoomMargin: 40
+                });
+            }
+        }
+
+        function getMarkerPresetByStatus(statusName) {
+            switch (statusName) {
+                case 'Новая':
+                    return 'islands#yellowIcon';
+
+                case 'На рассмотрении':
+                    return 'islands#lightBlueIcon';
+
+                case 'В работе':
+                case 'Принято':
+                    return 'islands#blueIcon';
+
+                case 'Завершена':
+                case 'Завершено':
+                    return 'islands#greenIcon';
+
+                case 'Отклонено':
+                    return 'islands#redIcon';
+
+                default:
+                    return 'islands#grayIcon';
+            }
+        }
+
+        function toNumber(value) {
+            if (value === null || value === undefined) {
+                return NaN;
+            }
+
+            if (typeof value === 'number') {
+                return value;
+            }
+
+            return Number(value.toString().replace(',', '.'));
+        }
+
+        function isValidCoordinate(latitude, longitude) {
+            if (Number.isNaN(latitude) || Number.isNaN(longitude)) {
+                return false;
+            }
+
+            if (latitude === 0 || longitude === 0) {
+                return false;
+            }
+
+            return latitude >= -90 &&
+                   latitude <= 90 &&
+                   longitude >= -180 &&
+                   longitude <= 180;
+        }
+
+        function escapeHtml(value) {
+            if (value === null || value === undefined) {
+                return '';
+            }
+
+            return value
+                .toString()
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#039;');
+        }
+    </script>
 }

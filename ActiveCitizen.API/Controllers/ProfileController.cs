@@ -19,17 +19,18 @@ namespace ActiveCitizen.API.Controllers
             _context = context;
         }
 
+        // GET: api/profile
         [HttpGet]
         public async Task<IActionResult> GetProfile()
         {
             var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
             if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
             {
                 return Unauthorized(new { message = "Пользователь не авторизован" });
             }
 
             var user = await _context.Users
-                .Include(u => u.Role)
                 .Where(u => u.Id == userId)
                 .Select(u => new
                 {
@@ -38,30 +39,37 @@ namespace ActiveCitizen.API.Controllers
                     u.FullName,
                     u.PhoneNumber,
                     u.DistrictId,
-                    Role = u.Role != null ? u.Role.Name : null
+                    u.NotificationsEnabled
                 })
                 .FirstOrDefaultAsync();
 
             if (user == null)
+            {
                 return NotFound(new { message = "Пользователь не найден" });
+            }
 
             return Ok(user);
         }
 
+        // PUT: api/profile
         [HttpPut]
         public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileModel model)
         {
             var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
             if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
             {
                 return Unauthorized(new { message = "Пользователь не авторизован" });
             }
 
-            var user = await _context.Users.FindAsync(userId);
-            if (user == null)
-                return NotFound(new { message = "Пользователь не найден" });
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Id == userId);
 
-            // Обновляем только переданные поля
+            if (user == null)
+            {
+                return NotFound(new { message = "Пользователь не найден" });
+            }
+
             if (!string.IsNullOrWhiteSpace(model.FullName))
             {
                 user.FullName = model.FullName.Trim();
@@ -69,17 +77,24 @@ namespace ActiveCitizen.API.Controllers
 
             if (model.PhoneNumber != null)
             {
-                user.PhoneNumber = string.IsNullOrWhiteSpace(model.PhoneNumber) ? null : model.PhoneNumber.Trim();
+                user.PhoneNumber = string.IsNullOrWhiteSpace(model.PhoneNumber)
+                    ? null
+                    : model.PhoneNumber.Trim();
             }
 
             if (!string.IsNullOrWhiteSpace(model.Email))
             {
-                var emailExists = await _context.Users.AnyAsync(u => u.Email == model.Email.Trim() && u.Id != userId);
+                var normalizedEmail = model.Email.Trim();
+
+                var emailExists = await _context.Users
+                    .AnyAsync(u => u.Email == normalizedEmail && u.Id != userId);
+
                 if (emailExists)
                 {
                     return BadRequest(new { message = "Этот email уже используется" });
                 }
-                user.Email = model.Email.Trim();
+
+                user.Email = normalizedEmail;
             }
 
             if (!string.IsNullOrWhiteSpace(model.NewPassword))
@@ -88,8 +103,14 @@ namespace ActiveCitizen.API.Controllers
                 {
                     return BadRequest(new { message = "Пароль должен содержать минимум 6 символов" });
                 }
+
                 var hasher = new PasswordHasher<User>();
                 user.PasswordHash = hasher.HashPassword(user, model.NewPassword);
+            }
+
+            if (model.NotificationsEnabled.HasValue)
+            {
+                user.NotificationsEnabled = model.NotificationsEnabled.Value;
             }
 
             await _context.SaveChangesAsync();
@@ -101,18 +122,27 @@ namespace ActiveCitizen.API.Controllers
                 user.FullName,
                 user.PhoneNumber,
                 user.DistrictId,
-                Role = user.Role?.Name
+                user.NotificationsEnabled
             };
 
-            return Ok(new { message = "Профиль обновлен", user = updatedUser });
+            return Ok(new
+            {
+                message = "Профиль обновлен",
+                user = updatedUser
+            });
         }
     }
 
     public class UpdateProfileModel
     {
         public string? FullName { get; set; }
+
         public string? PhoneNumber { get; set; }
+
         public string? Email { get; set; }
+
         public string? NewPassword { get; set; }
+
+        public bool? NotificationsEnabled { get; set; }
     }
 }

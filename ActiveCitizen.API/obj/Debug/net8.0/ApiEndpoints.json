@@ -72,7 +72,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ActiveCitizen.API.Controllers.AuthController\u002BForgotPasswordModel",
+        "Type": "ActiveCitizen.API.Controllers.ForgotPasswordModel",
         "IsRequired": true
       }
     ],
@@ -88,7 +88,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ActiveCitizen.API.Controllers.AuthController\u002BLoginModel",
+        "Type": "ActiveCitizen.API.Controllers.LoginModel",
         "IsRequired": true
       }
     ],
@@ -104,7 +104,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ActiveCitizen.API.Controllers.AuthController\u002BRegisterModel",
+        "Type": "ActiveCitizen.API.Controllers.RegisterModel",
         "IsRequired": true
       }
     ],
@@ -120,7 +120,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ActiveCitizen.API.Controllers.AuthController\u002BRegisterInspectorModel",
+        "Type": "ActiveCitizen.API.Controllers.RegisterInspectorModel",
         "IsRequired": true
       }
     ],

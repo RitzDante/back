@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ActiveCitizen.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d9fd13e0058294dda41fd42a6fca709db48d9ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3987ceead79ef06bd4df62772df822fad45bad69")]
 [assembly: System.Reflection.AssemblyProductAttribute("ActiveCitizen.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ActiveCitizen.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
