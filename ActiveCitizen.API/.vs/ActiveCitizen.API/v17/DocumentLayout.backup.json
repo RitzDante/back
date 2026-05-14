@@ -3,85 +3,39 @@
   "WorkspaceRootPath": "D:\\back\\ActiveCitizen.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\inspector\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\wwwroot\\js\\inspector-map.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\inspector\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\controllers\\inspectorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\services\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\models\\statusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\models\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:models\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\violationtypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\violationtypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\createclaimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\createclaimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\models\\claimviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\dtos\\claimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:dtos\\claimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\districtscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\districtscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|d:\\back\\activecitizen.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977400C3-3AD0-4F8D-85AF-F75B74590D0B}|ActiveCitizen.API.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\models\\districtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F8994-973F-4D8C-891E-B813BF0FF0EE}|..\\ActiveCitizen.Web\\ActiveCitizen.Web.csproj|d:\\back\\activecitizen.web\\controllers\\inspectorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -91,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -99,257 +53,137 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T13:59:30.032Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-13T23:08:42.647Z",
+              "Title": "inspector-map.js",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\wwwroot\\js\\inspector-map.js",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswNMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-14T13:28:02.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClaimsController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
-              "RelativeToolTip": "Controllers\\ClaimsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T18:53:57.674Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Inspector\\Index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T11:07:13.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:04:28.676Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Status.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Models\\Status.cs",
-              "RelativeDocumentMoniker": "Models\\Status.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Models\\Status.cs",
-              "RelativeToolTip": "Models\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:04:12.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Models\\Role.cs",
-              "RelativeToolTip": "Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:04:05.835Z"
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Inspector\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T11:06:44.275Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "District.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Models\\District.cs",
-              "RelativeDocumentMoniker": "Models\\District.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Models\\District.cs",
-              "RelativeToolTip": "Models\\District.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:03:58.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Claim.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Models\\Claim.cs",
-              "RelativeDocumentMoniker": "Models\\Claim.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Models\\Claim.cs",
-              "RelativeToolTip": "Models\\Claim.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:03:37.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ViolationTypeDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\ViolationTypeDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\ViolationTypeDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\ViolationTypeDto.cs",
-              "RelativeToolTip": "DTOs\\ViolationTypeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:03:11.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UpdateStatusDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\UpdateStatusDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\UpdateStatusDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\UpdateStatusDto.cs",
-              "RelativeToolTip": "DTOs\\UpdateStatusDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:02:43.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DistrictDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\DistrictDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\DistrictDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\DistrictDto.cs",
-              "RelativeToolTip": "DTOs\\DistrictDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:02:36.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ClaimDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\ClaimDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
-              "RelativeToolTip": "DTOs\\ClaimDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T15:27:27.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CreateClaimDto.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\CreateClaimDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\CreateClaimDto.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\CreateClaimDto.cs",
-              "RelativeToolTip": "DTOs\\CreateClaimDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T18:50:46.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:02:14.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:02:05.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAwwHUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:01:58.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DistrictsController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\DistrictsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DistrictsController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\DistrictsController.cs",
-              "RelativeToolTip": "Controllers\\DistrictsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:01:51.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:01:37.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAcwGcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:01:15.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-28T15:31:16.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DistrictViewModel.cs",
-              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Models\\DistrictViewModel.cs",
-              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Models\\DistrictViewModel.cs",
-              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Models\\DistrictViewModel.cs",
-              "RelativeToolTip": "..\\ActiveCitizen.Web\\Models\\DistrictViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T15:30:19.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "InspectorController.cs",
               "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
               "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
               "ToolTip": "D:\\back\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
               "RelativeToolTip": "..\\ActiveCitizen.Web\\Controllers\\InspectorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T15:29:48.963Z"
+              "WhenOpened": "2026-05-14T11:06:24.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.API\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimsController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwHoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T10:49:12.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Services\\ApiClient.cs",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Services\\ApiClient.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Services\\ApiClient.cs",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Services\\ApiClient.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAqwIwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:05:44.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IApiClient.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Services\\IApiClient.cs",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Services\\IApiClient.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Services\\IApiClient.cs",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Services\\IApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:05:04.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StatusViewModel.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Models\\StatusViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:04:43.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClaimViewModel.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
+              "RelativeDocumentMoniker": "..\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
+              "RelativeToolTip": "..\\ActiveCitizen.Web\\Models\\ClaimViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:03:45.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClaimDto.cs",
+              "DocumentMoniker": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ClaimDto.cs",
+              "ToolTip": "D:\\back\\ActiveCitizen.API\\DTOs\\ClaimDto.cs",
+              "RelativeToolTip": "DTOs\\ClaimDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:27:27.508Z"
             }
           ]
         }

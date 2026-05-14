@@ -64,3 +64,4 @@ D:\back\ActiveCitizen.Web\obj\Debug\net8.0\refint\ActiveCitizen.Web.dll
 D:\back\ActiveCitizen.Web\obj\Debug\net8.0\ActiveCitizen.Web.pdb
 D:\back\ActiveCitizen.Web\obj\Debug\net8.0\ActiveCitizen.Web.genruntimeconfig.cache
 D:\back\ActiveCitizen.Web\obj\Debug\net8.0\ref\ActiveCitizen.Web.dll
+D:\back\ActiveCitizen.Web\obj\Debug\net8.0\ActiveCitizen.Web.sourcelink.json

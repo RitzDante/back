@@ -184,6 +184,22 @@
   },
   {
     "ContainingType": "ActiveCitizen.API.Controllers.ClaimsController",
+    "Method": "GetClaimPhoto",
+    "RelativePath": "api/Claims/{id}/photo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActiveCitizen.API.Controllers.ClaimsController",
     "Method": "UpdateClaimStatus",
     "RelativePath": "api/Claims/{id}/status",
     "HttpMethod": "PUT",
@@ -207,6 +223,16 @@
     "ContainingType": "ActiveCitizen.API.Controllers.ClaimsController",
     "Method": "GetMyClaims",
     "RelativePath": "api/Claims/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ActiveCitizen.API.Controllers.ClaimsController",
+    "Method": "GetStatuses",
+    "RelativePath": "api/Claims/statuses",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

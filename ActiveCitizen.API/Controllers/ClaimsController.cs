@@ -2,6 +2,7 @@
 using ActiveCitizen.API.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -13,15 +14,18 @@ namespace ActiveCitizen.API.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<ClaimsController> _logger;
+        private readonly IWebHostEnvironment _environment;
         private readonly IConfiguration _configuration;
 
         public ClaimsController(
             ApplicationDbContext context,
             ILogger<ClaimsController> logger,
+            IWebHostEnvironment environment,
             IConfiguration configuration)
         {
             _context = context;
             _logger = logger;
+            _environment = environment;
             _configuration = configuration;
         }
 
@@ -43,7 +47,7 @@ namespace ActiveCitizen.API.Controllers
                 .Select(c => new ClaimDto
                 {
                     Id = c.Id,
-                    Description = c.Description ?? string.Empty,
+                    Description = c.Description,
                     Address = c.Address,
                     Latitude = c.Latitude,
                     Longitude = c.Longitude,
@@ -51,7 +55,8 @@ namespace ActiveCitizen.API.Controllers
                     StatusId = c.StatusId,
                     ViolationTypeName = c.ViolationType != null ? c.ViolationType.Name : string.Empty,
                     ViolationTypeId = c.ViolationTypeId,
-                    CreatedAt = c.CreatedAt ?? DateTime.MinValue
+                    CreatedAt = c.CreatedAt ?? DateTime.MinValue,
+                    PhotoPath = c.PhotoPath
                 })
                 .ToListAsync();
 
@@ -80,26 +85,15 @@ namespace ActiveCitizen.API.Controllers
                 .FirstOrDefaultAsync(v => v.Id == model.ViolationTypeId);
 
             if (violationType == null)
-            {
-                return BadRequest(new
-                {
-                    message = "Указанный тип нарушения не найден."
-                });
-            }
+                return BadRequest(new { message = "Указанный тип нарушения не найден." });
 
             var districtName = NormalizeText(model.DistrictName);
 
             if (string.IsNullOrWhiteSpace(districtName))
-            {
-                return BadRequest(new
-                {
-                    message = "Район не передан."
-                });
-            }
+                return BadRequest(new { message = "Район не передан." });
 
             var district = await _context.Districts
-                .FirstOrDefaultAsync(d =>
-                    d.Name.Trim().ToLower() == districtName.ToLower());
+                .FirstOrDefaultAsync(d => d.Name.Trim().ToLower() == districtName.ToLower());
 
             if (district == null)
             {
@@ -113,34 +107,26 @@ namespace ActiveCitizen.API.Controllers
                 .FirstOrDefaultAsync(s => s.Id == 1);
 
             if (status == null)
-            {
-                return BadRequest(new
-                {
-                    message = "Статус с Id = 1 не найден в справочнике Statuses."
-                });
-            }
+                return BadRequest(new { message = "Статус с Id = 1 не найден в справочнике Statuses." });
 
             var address = NormalizeText(model.Address);
 
             if (string.IsNullOrWhiteSpace(address))
-            {
-                return BadRequest(new
-                {
-                    message = "Адрес не передан."
-                });
-            }
+                return BadRequest(new { message = "Адрес не передан." });
 
             var claim = new ActiveCitizen.API.Models.Claim
             {
                 UserId = userId.Value,
-                StatusId = status.Id,
+                StatusId = 1,
                 ViolationTypeId = violationType.Id,
                 DistrictId = district.Id,
                 Address = address,
                 Latitude = model.Latitude,
                 Longitude = model.Longitude,
                 PhotoPath = null,
-                Description = string.IsNullOrWhiteSpace(model.Description) ? null : model.Description.Trim(),
+                Description = string.IsNullOrWhiteSpace(model.Description)
+                    ? null
+                    : model.Description.Trim(),
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -149,14 +135,20 @@ namespace ActiveCitizen.API.Controllers
 
             if (model.Photo != null && model.Photo.Length > 0)
             {
-                claim.PhotoPath = await SaveClaimPhotoAsync(model.Photo, claim.Id, district.Id, district.Name);
+                claim.PhotoPath = await SaveClaimPhotoAsync(
+                    model.Photo,
+                    claim.Id,
+                    district.Id,
+                    district.Name
+                );
+
                 await _context.SaveChangesAsync();
             }
 
             var createdClaimDto = new ClaimDto
             {
                 Id = claim.Id,
-                Description = claim.Description ?? string.Empty,
+                Description = claim.Description,
                 Address = claim.Address,
                 Latitude = claim.Latitude,
                 Longitude = claim.Longitude,
@@ -164,7 +156,8 @@ namespace ActiveCitizen.API.Controllers
                 StatusId = claim.StatusId,
                 ViolationTypeName = violationType.Name,
                 ViolationTypeId = claim.ViolationTypeId,
-                CreatedAt = claim.CreatedAt ?? DateTime.MinValue
+                CreatedAt = claim.CreatedAt ?? DateTime.MinValue,
+                PhotoPath = claim.PhotoPath
             };
 
             return CreatedAtAction(nameof(GetMyClaims), new { id = createdClaimDto.Id }, createdClaimDto);
@@ -187,6 +180,23 @@ namespace ActiveCitizen.API.Controllers
             return Ok(types);
         }
 
+        // GET: api/claims/statuses
+        [HttpGet("statuses")]
+        [Authorize(Roles = "Inspector")]
+        public async Task<IActionResult> GetStatuses()
+        {
+            var statuses = await _context.Statuses
+                .OrderBy(s => s.Id)
+                .Select(s => new
+                {
+                    s.Id,
+                    s.Name
+                })
+                .ToListAsync();
+
+            return Ok(statuses);
+        }
+
         // GET: api/claims
         [HttpGet]
         [Authorize(Roles = "Inspector")]
@@ -205,7 +215,7 @@ namespace ActiveCitizen.API.Controllers
                 .Select(c => new ClaimDto
                 {
                     Id = c.Id,
-                    Description = c.Description ?? string.Empty,
+                    Description = c.Description,
                     Address = c.Address,
                     Latitude = c.Latitude,
                     Longitude = c.Longitude,
@@ -213,7 +223,8 @@ namespace ActiveCitizen.API.Controllers
                     StatusId = c.StatusId,
                     ViolationTypeName = c.ViolationType != null ? c.ViolationType.Name : string.Empty,
                     ViolationTypeId = c.ViolationTypeId,
-                    CreatedAt = c.CreatedAt ?? DateTime.MinValue
+                    CreatedAt = c.CreatedAt ?? DateTime.MinValue,
+                    PhotoPath = c.PhotoPath
                 })
                 .ToListAsync();
 
@@ -237,7 +248,7 @@ namespace ActiveCitizen.API.Controllers
                 .Select(c => new ClaimDto
                 {
                     Id = c.Id,
-                    Description = c.Description ?? string.Empty,
+                    Description = c.Description,
                     Address = c.Address,
                     Latitude = c.Latitude,
                     Longitude = c.Longitude,
@@ -245,7 +256,8 @@ namespace ActiveCitizen.API.Controllers
                     StatusId = c.StatusId,
                     ViolationTypeName = c.ViolationType != null ? c.ViolationType.Name : string.Empty,
                     ViolationTypeId = c.ViolationTypeId,
-                    CreatedAt = c.CreatedAt ?? DateTime.MinValue
+                    CreatedAt = c.CreatedAt ?? DateTime.MinValue,
+                    PhotoPath = c.PhotoPath
                 })
                 .FirstOrDefaultAsync();
 
@@ -258,6 +270,36 @@ namespace ActiveCitizen.API.Controllers
             }
 
             return Ok(claim);
+        }
+
+        // GET: api/claims/{id}/photo
+        [HttpGet("{id:int}/photo")]
+        [Authorize(Roles = "Citizen,Inspector")]
+        public async Task<IActionResult> GetClaimPhoto(int id)
+        {
+            var claim = await _context.Claims
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (claim == null)
+                return NotFound(new { message = "Заявка не найдена." });
+
+            if (!CanCurrentUserAccessClaim(claim))
+                return Forbid();
+
+            if (string.IsNullOrWhiteSpace(claim.PhotoPath))
+                return NotFound(new { message = "Фото у заявки отсутствует." });
+
+            var photoFullPath = GetPhotoFullPath(claim.PhotoPath);
+
+            if (!System.IO.File.Exists(photoFullPath))
+                return NotFound(new { message = "Файл фотографии не найден на сервере." });
+
+            var provider = new FileExtensionContentTypeProvider();
+
+            if (!provider.TryGetContentType(photoFullPath, out var contentType))
+                contentType = "application/octet-stream";
+
+            return PhysicalFile(photoFullPath, contentType, Path.GetFileName(photoFullPath));
         }
 
         // PUT: api/claims/{id}/status
@@ -368,6 +410,36 @@ namespace ActiveCitizen.API.Controllers
             return districtId;
         }
 
+        private bool CanCurrentUserAccessClaim(ActiveCitizen.API.Models.Claim claim)
+        {
+            if (User.IsInRole("Inspector"))
+            {
+                var districtId = GetCurrentInspectorDistrictId();
+                return districtId != null && claim.DistrictId == districtId.Value;
+            }
+
+            if (User.IsInRole("Citizen"))
+            {
+                var userId = GetCurrentUserId();
+                return userId != null && claim.UserId == userId.Value;
+            }
+
+            return false;
+        }
+
+        private string GetPhotoFullPath(string photoPath)
+        {
+            if (Path.IsPathRooted(photoPath))
+                return photoPath;
+
+            var webRootPath = _environment.WebRootPath;
+
+            if (string.IsNullOrWhiteSpace(webRootPath))
+                webRootPath = Path.Combine(_environment.ContentRootPath, "wwwroot");
+
+            return Path.Combine(webRootPath, photoPath.Replace('/', Path.DirectorySeparatorChar));
+        }
+
         private static string NormalizeText(string? value)
         {
             return string.IsNullOrWhiteSpace(value)
@@ -375,14 +447,16 @@ namespace ActiveCitizen.API.Controllers
                 : value.Trim();
         }
 
-        private async Task<string> SaveClaimPhotoAsync( IFormFile photo, int claimId, int districtId, string districtName)
+        private async Task<string> SaveClaimPhotoAsync(
+            IFormFile photo,
+            int claimId,
+            int districtId,
+            string districtName)
         {
             var rootPath = _configuration["ClaimPhotosRoot"];
 
             if (string.IsNullOrWhiteSpace(rootPath))
-            {
                 rootPath = @"D:\gati-claims-foto";
-            }
 
             var districtFolderName = GetDistrictFolderName(districtId, districtName);
             var districtFolderPath = Path.Combine(rootPath, districtFolderName);

@@ -1,42 +1,45 @@
-﻿@using System.Linq 
+﻿@using System.Linq
 @model List<ActiveCitizen.Web.Models.ClaimViewModel>
+
 @{
     ViewData["Title"] = "Панель инспектора";
 }
 
- <h2>Заявки вашего района</h2>
- <div class="row mb-3">
-     <div class="col-md-12">
-         <label for="statusFilter">Фильтр по статусу</label>
-         <select id="statusFilter" class="form-control d-inline-block w-auto me-3">
-             <option value="">Все статусы</option>
-             <option value="на рассмотрении">На рассмотрении</option>
-             <option value="принято">Принято</option>
-             <option value="завершено">Завершено</option>
-             <option value="отлонено">Отклонено</option>
-         </select>
+<h2>Заявки вашего района</h2>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <label for="statusFilter">Фильтр по статусу</label>
+        <select id="statusFilter" class="form-control d-inline-block w-auto me-3">
+            <option value="">Все статусы</option>
+            <option value="новая">Новая</option>
+            <option value="в работе">В работе</option>
+            <option value="завершена">Завершена</option>
+            <option value="отклонена">Отклонена</option>
+        </select>
 
         <label for="violationTypeFilter">Фильтр по типу нарушения:</label>
         <select id="violationTypeFilter" class="form-control d-inline-block w-auto me-3">
             <option value="">Все типы</option>
             <option value="тс размещено на зеленых насаждениях">ТС размещено на зеленых насаждениях</option>
             <option value="тс перегораживает подход к зданию или вход в него">ТС перегораживает подход к зданию или вход в него</option>
-            <option value="тс размещено на спортивной/детской площадке или площадке для выгула собак">ТС размещено на спортивной/детской площадке или площадке для выгула собак</option>
+            <option value="тс размещено на спортивной/детской площадке или площадке для выгула животных">ТС размещено на спортивной/детской площадке или площадке для выгула животных</option>
             <option value="тс перегораживает контейнерную площадку">ТС перегораживает контейнерную площадку</option>
             <option value="тс размещено на эксплуатационной маркировке">ТС размещено на эксплуатационной маркировке</option>
         </select>
-     </div>
- </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-md-6">
         <h4>Список заявок</h4>
+
         @if (Model.Any())
         {
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>№</th>
                         <th>Тип нарушения</th>
                         <th>Адрес</th>
                         <th>Статус</th>
@@ -44,22 +47,38 @@
                         <th></th>
                     </tr>
                 </thead>
+
                 <tbody id="claimsTableBody">
                     @foreach (var claim in Model)
-                {
-                    <tr data-status="@claim.StatusName.ToLower()" data-violation-type="@claim.ViolationTypeName.ToLower()">
-                        <td>@claim.Id</td>
-                        <td>@claim.ViolationTypeName</td>
-                        <td>@claim.Address</td>
-                        <td>@claim.StatusName</td>
-                        <td>@claim.CreatedAt.ToShortDateString()</td>
-                        <td><a asp-action="Details" asp-route-id="@claim.Id">Подробнее</a></td>
-                    </tr>
-                }
-               </tbody>
+                    {
+                        var statusValue = (claim.StatusName ?? "").ToLower().Trim();
+                        var violationTypeValue = (claim.ViolationTypeName ?? "").ToLower().Trim();
+
+                        <tr class="claim-row"
+                            data-status="@statusValue"
+                            data-violation-type="@violationTypeValue">
+                            <td>@claim.Id</td>
+                            <td>@claim.ViolationTypeName</td>
+                            <td>@claim.Address</td>
+                            <td>
+                                <span class="badge @GetStatusBadgeClass(claim.StatusName)">
+                                    @claim.StatusName
+                                </span>
+                            </td>
+                            <td>@claim.CreatedAt.ToShortDateString()</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@claim.Id">Подробнее</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
             </table>
+
+            <p id="noFilteredClaimsMessage" class="text-muted d-none">
+                По выбранным фильтрам заявок не найдено.
+            </p>
         }
-        else 
+        else
         {
             <p id="noClaimsMessage">Нет заявок в вашем районе</p>
         }
@@ -68,14 +87,31 @@
     <div class="col-md-6">
         <h4>Карта заявок</h4>
         <div class="bg-white rounded shadow-sm" style="height: 500px; overflow: hidden;">
-            <div id="map" style="height: 100%; width:100%; border-radius: 0.375rem; background:#f8f9fa; "></div>
-		</div>
-	</div>
+            <div id="map" style="height: 100%; width:100%; border-radius: 0.375rem; background:#f8f9fa;"></div>
+        </div>
+    </div>
 </div>
+
+@functions {
+    private string GetStatusBadgeClass(string? status)
+    {
+        var value = status?.Trim().ToLower() ?? string.Empty;
+
+        return value switch
+        {
+            "новая" => "bg-warning text-dark",
+            "в работе" => "bg-primary",
+            "завершена" => "bg-success",
+            "отклонена" => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}
 
 @section Scripts {
     <script>
         window.claimsData = @Html.Raw(Model == null ? "[]" : Json.Serialize(Model));
     </script>
+
     <script src="~/js/inspector-map.js" asp-append-version="true"></script>
 }
